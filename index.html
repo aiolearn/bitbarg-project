@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>سایت بیت برگ</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+
+    <body>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>    
+        <br>
+        <div class="main">
+
+
+            <img src="img/logo.webp" class="logo" title="صرافی دانشجویان آیولرن" >
+
+            <br>
+
+            <div class="div1">
+                <div class="header">
+                    <div class="head2">
+                        <button id="btn1" class="btn1" onclick="btns(1)">
+                            خرید
+                        </button>
+                        <button id="btn2" class="btn2" onclick="btns(2)">
+                            فروش
+                        </button>
+                        <button id="btn3" class="btn2" onclick="btns(3)">
+                            تبدیل
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="div_inputs">
+                    <div class="div_in">
+                        <fieldset id="fset1">
+                            <legend style="font-size: 11px; color:gray">انتخاب ارز</legend>
+                            <input class="input1" value="بیت کوین (BTC)" onclick="filedset_border(1)">  
+                        
+                        </fieldset>
+                    </div>
+
+                    <div class="div_in">
+                        <fieldset id="fset2">
+                            <legend style="font-size: 11px; color:gray" >واحد</legend>
+                            <input type="number" class="input1" id="tedad" style="direction: ltr;" value="1"  onclick="filedset_border(2)" onkeyup="mohasebe()" onchange="mohasebe()">  
+                        
+                        </fieldset>
+                    </div>
+
+                    <div class="div_in">
+                        <fieldset id="fset3">
+                            <legend style="font-size: 11px; color:gray"  >تومان</legend>
+                            <input class="input1" id="price"  style="direction: ltr;" value="" onclick="filedset_border(3)">  
+                        
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="div_btn">
+                    <button id="btn_kharid" class="btn_kharid">
+                        خرید ارز
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var btn_price=1538270496;
+
+            document.getElementById("price").value=btn_price.toLocaleString();
+
+            function mohasebe(){
+                let tedad=  document.getElementById("tedad").value;
+                document.getElementById("price").value = (tedad * btn_price).toLocaleString();
+            }
+
+            function filedset_border(fs){
+
+                document.getElementById("fset1").style.borderColor='#c2c2c2';
+                document.getElementById("fset1").style.borderWidth='1px';
+
+                document.getElementById("fset2").style.borderColor='#c2c2c2';
+                document.getElementById("fset2").style.borderWidth='1px';
+
+                document.getElementById("fset3").style.borderColor='#c2c2c2';
+                document.getElementById("fset3").style.borderWidth='1px';
+
+                
+
+                if (fs==1){
+                document.getElementById("fset1").style.borderColor='#4285F2';
+                document.getElementById("fset1").style.borderWidth='2px';
+                }
+
+                
+                if (fs==2){
+                document.getElementById("fset2").style.borderColor='#4285F2';
+                document.getElementById("fset2").style.borderWidth='2px';
+                }
+
+
+                
+                if (fs==3){
+                document.getElementById("fset3").style.borderColor='#4285F2';
+                document.getElementById("fset3").style.borderWidth='2px';
+                }
+            }
+
+            function btns(bt){
+
+
+                document.getElementById("btn1").removeAttribute("class");
+                document.getElementById("btn1").setAttribute("class","btn2");
+                document.getElementById("btn2").removeAttribute("class");
+                document.getElementById("btn2").setAttribute("class","btn2");
+                document.getElementById("btn3").removeAttribute("class");
+                document.getElementById("btn3").setAttribute("class","btn2");
+
+
+                if (bt==1){
+                    document.getElementById("btn1").removeAttribute("class");
+                    document.getElementById("btn1").setAttribute("class","btn1");
+                    document.getElementById("btn_kharid").innerText="خرید ارز";
+                    btn_price=1538270496;
+                    document.getElementById("price").value=btn_price.toLocaleString();
+                }
+
+                if (bt==2){
+                    document.getElementById("btn2").removeAttribute("class");
+                    document.getElementById("btn2").setAttribute("class","btn1");
+                    document.getElementById("btn_kharid").innerText="فروش ارز";
+                    btn_price=1522905086;
+                    document.getElementById("price").value=btn_price.toLocaleString();
+                }
+
+                if (bt==3){
+                    document.getElementById("btn3").removeAttribute("class");
+                    document.getElementById("btn3").setAttribute("class","btn1");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+@font-face {
+font-family: 'iransans' ;
+src: url('../font/iransans.woff2');
+}
+
+.main{
+    text-align: center;
+    font-family: 'iransans';
+    font-weight: 400;
+}
+
+.logo{
+    width: 272px;
+}
+
+.div1{
+    width: 700px; 
+    border:  1px solid #e0e0e0;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 12px;
+    
+    overflow: hidden;
+}
+
+.header{
+    background-color: #fafafa;
+    height: 48px;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.btn1{
+    background: #eff1ff;
+    width: 90px;
+    height: 100%;
+    border: none;
+    color: #4285F2;
+    font-size: 16px;
+    font-family: "iransans";
+    border-bottom: 1px solid #268df5;
+    cursor: pointer;
+}
+
+
+.btn2{ 
+    width: 90px;
+    height: 100%;
+    border: none;
+    color: #727272;
+    font-size: 16px;
+    font-family: "iransans"; 
+    background-color:transparent ;
+    
+    cursor: pointer;
+}
+
+.head2{
+    width: 100%;
+    text-align: right;
+    direction: rtl;
+}
+
+.div_inputs{
+    margin-top: 30px;
+    text-align: left;
+    padding: 24px;
+    display: flex;
+}
+
+.div_in{
+    width: 33%;
+    display: inline;
+}
+
+fieldset{
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    direction: rtl;
+
+}
+
+fieldset:focus-visible{
+    border: 1px solid #7489ff; 
+
+}
+
+
+fieldset:hover{
+    border: 1px solid #000000; 
+
+}
+
+.input1{
+    font-family: 'iransans';
+    text-align: center;
+    border: none;
+}
+
+.input1:focus-visible{
+    border: none;
+    box-sizing: unset;
+    outline: none;
+}
+
+.div_btn{
+    text-align: left;
+    padding: 24px;
+    padding-top: 10px;
+}
+
+.btn_kharid{
+    background-color: #4285F2;
+    color: white;
+    padding: 6px 50px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'iransans';
+    font-size: 15px;
+    width: 155px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_kharid:hover{
+    
+    background-color: #0453d3;
+}
